@@ -1,4 +1,4 @@
-name: variant_calling
+name: denovo_assembly
 channels:
   - conda-forge
   - bioconda
