@@ -120,8 +120,10 @@ X                 1              55
 ### 2. Trimming Fastq files  
 
 #### Download the fastq and adapter files in the untrimmed fastq directory:  
-`$ wget -nv https://figshare.com/ndownloader/files/45571629 -O 169_S7_L001_R1_001.trim.fastq.gz`   
-`$ wget -nv https://figshare.com/ndownloader/files/45571626 -O 169_S7_L001_R2_001.trim.fastq.gz`  
+`$ cd denovo_assembly/untrimmed_fastq`  
+`$ wget -nv https://figshare.com/ndownloader/files/45571629 -O 169_S7_L001_R1_001.fastq.gz`   
+`$ wget -nv https://figshare.com/ndownloader/files/45571626 -O 169_S7_L001_R2_001.fastq.gz` 
+`$ cp /home/gitpod/miniconda/envs/variant_calling/share/trimmomatic-0.39-2/adapters/TruSeq3-PE-2.fa:2:40:15 .` 
 
 
 #### Running FastQC on the raw fastq files:  
@@ -133,9 +135,9 @@ X                 1              55
 #### Now run Trimmomatic on the raw fastq files:  
 
 ```
-$ java -jar /usr/local/share/Trimmomatic-main/dist/jar/trimmomatic-0.40-rc1.jar PE 169_S7_L001_R1_001.fastq.gz  169_S7_L001_R2_001.fastq.gz 
-169_S7_L001_R1_001.trim.fastq.gz 169_S7_L001_R1_001un.trim.fastq.gz
-169_S7_L001_R2_001.trim.fastq.gz 169_S7_L001_R2_001un.trim.fastq.gz
+$ trimmomatic PE 169_S7_L001_R1_001.fastq.gz  169_S7_L001_R2_001.fastq.gz \
+169_S7_L001_R1_001.trim.fastq.gz 169_S7_L001_R1_001un.trim.fastq.gz \
+169_S7_L001_R2_001.trim.fastq.gz 169_S7_L001_R2_001un.trim.fastq.gz \
 SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 ```
 
