@@ -119,9 +119,9 @@ X                 1              55
 
 ### 2. Trimming Fastq files  
 
-#### Copy the fastq and adapter files in the untrimmed fastq directory:  
-`$ cp -i /usr/local/share/data/denovo_assembly/untrimmed_fastq/169_S7_L001_R* .`  
-`$ cp -i /usr/local/share/data/denovo_assembly/untrimmed_fastq/TruSeq3-PE-2.fa .`  
+#### Download the fastq and adapter files in the untrimmed fastq directory:  
+`$ wget -nv https://figshare.com/ndownloader/files/45571629 -O 169_S7_L001_R1_001.trim.fastq.gz`   
+`$ wget -nv https://figshare.com/ndownloader/files/45571626 -O 169_S7_L001_R2_001.trim.fastq.gz`  
 
 
 #### Running FastQC on the raw fastq files:  
