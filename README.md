@@ -114,13 +114,13 @@ X                 1              55
 
 #### Making directories for lesson:
 
-`$ mkdir -p denovo_assembly/data/untrimmed_fastq denovo_assembly/data/trimmed_fastq`     
+`$ mkdir -p ~/denovo_assembly/data/untrimmed_fastq ~/denovo_assembly/data/trimmed_fastq`     
 
 
 ### 2. Trimming Fastq files  
 
 #### Download the fastq and adapter files in the untrimmed fastq directory:  
-`$ cd denovo_assembly/untrimmed_fastq`  
+`$ cd denovo_assembly/data/untrimmed_fastq`  
 `$ wget -nv https://figshare.com/ndownloader/files/45571629 -O 169_S7_L001_R1_001.fastq.gz`   
 `$ wget -nv https://figshare.com/ndownloader/files/45571626 -O 169_S7_L001_R2_001.fastq.gz`  
 `$ cp /home/gitpod/miniconda/envs/denovo_assembly/share/trimmomatic-0.39-2/adapters/TruSeq3-PE-2.fa .` 
@@ -128,7 +128,6 @@ X                 1              55
 
 #### Running FastQC on the raw fastq files:  
 
-`$ cd denovo_assembly/data/untrimmed_fastq`  
 `$ fastqc *.fastq.gz`  
 
 
@@ -159,11 +158,9 @@ $ trimmomatic PE 169_S7_L001_R1_001.fastq.gz 169_S7_L001_R2_001.fastq.gz 169_S7_
 
 
 
-#### For this tutorial, copy the trimmed fastq files into `trimmed_fastq` directory:  
+#### Change to the `trimmed_fastq` directory:  
 `$ cd ../trimmed_fastq`  
-`$ cp /usr/local/share/data/denovo_assembly/data/trimmed_fastq/*.trim.fastq.gz .`   
-
-
+   
 
 ### 3. Sequence Assembly
 
@@ -171,7 +168,7 @@ $ trimmomatic PE 169_S7_L001_R1_001.fastq.gz 169_S7_L001_R2_001.fastq.gz 169_S7_
 
 #### Spades will automatically make the final scaffolds:  
 
-`$ spades.py -k 21,33,55,77,99,127 --careful -1 169_S7_L001_R1_001.trim.fastq.gz -2 169_S7_L001_R2_001.trim.fastq.gz -o spades_output`   
+`$ spades.py --isolate  -1 169_S7_L001_R1_001.trim.fastq.gz -2 169_S7_L001_R2_001.trim.fastq.gz -o spades_output`   
 
 `ls -l spades_output`  
 
