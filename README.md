@@ -114,7 +114,7 @@ X                 1              55
 
 #### Making directories for lesson:
 
-`$ mkdir -p denovo_assembly/untrimmed_fastq denovo_assembly/trimmed_fastq`     
+`$ mkdir -p denovo_assembly/data/untrimmed_fastq denovo_assembly/data/trimmed_fastq`     
 
 
 ### 2. Trimming Fastq files  
@@ -123,12 +123,12 @@ X                 1              55
 `$ cd denovo_assembly/untrimmed_fastq`  
 `$ wget -nv https://figshare.com/ndownloader/files/45571629 -O 169_S7_L001_R1_001.fastq.gz`   
 `$ wget -nv https://figshare.com/ndownloader/files/45571626 -O 169_S7_L001_R2_001.fastq.gz`  
-`$ cp /home/gitpod/miniconda/envs/denovo_assembly/share/trimmomatic-0.39-2/adapters/TruSeq3-PE-2.fa:2:40:15 .` 
+`$ cp /home/gitpod/miniconda/envs/denovo_assembly/share/trimmomatic-0.39-2/adapters/TruSeq3-PE-2.fa .` 
 
 
 #### Running FastQC on the raw fastq files:  
 
-`$ cd denovo_assembly/untrimmed_fastq`  
+`$ cd denovo_assembly/data/untrimmed_fastq`  
 `$ fastqc *.fastq.gz`  
 
 
@@ -209,7 +209,7 @@ $ trimmomatic PE 169_S7_L001_R1_001.fastq.gz 169_S7_L001_R2_001.fastq.gz 169_S7_
 #### Create and move scaffolds from SPades to results directory:  
 
 `$ mkdir -p ~/denovo_assembly/results/scaffolds`  
-`$ mv ~/denovo_assembly/trimmed_fastq/spades_output/scaffolds.fasta ~/denovo_assembly/results/scaffolds`  
+`$ mv ~/denovo_assembly/data/trimmed_fastq/spades_output/scaffolds.fasta ~/denovo_assembly/results/scaffolds`  
 `$ cd ~/denovo_assembly/results/scaffolds`    
 
 #### We now want to be at the `denovo_assembly` directory
