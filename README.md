@@ -122,7 +122,7 @@ X                 1              55
 ### 2. Trimming Fastq files  
 
 #### Download the fastq and adapter files in the untrimmed fastq directory:  
-`$ cd denovo_assembly/data/untrimmed_fastq`  
+`$ cd ~/denovo_assembly/data/untrimmed_fastq`  
 `$ wget -nv https://figshare.com/ndownloader/files/45571629 -O 169_S7_L001_R1_001.fastq.gz`   
 `$ wget -nv https://figshare.com/ndownloader/files/45571626 -O 169_S7_L001_R2_001.fastq.gz`  
 `$ cp /home/gitpod/miniconda/envs/denovo_assembly/share/trimmomatic-0.39-2/adapters/TruSeq3-PE-2.fa .` 
@@ -172,7 +172,7 @@ $ trimmomatic PE 169_S7_L001_R1_001.fastq.gz 169_S7_L001_R2_001.fastq.gz 169_S7_
 
 `$ spades.py --isolate  -1 169_S7_L001_R1_001.trim.fastq.gz -2 169_S7_L001_R2_001.trim.fastq.gz -o spades_output`   
 
-`ls -l spades_output`  
+`$ ls -l spades_output`  
 
 #### Notice in our `spades_output` directory we have both a `contigs.fasta` and a `scaffolds.fasta`  
 
@@ -247,7 +247,7 @@ $ trimmomatic PE 169_S7_L001_R1_001.fastq.gz 169_S7_L001_R2_001.fastq.gz 169_S7_
 `$ bwa index results/scaffolds/scaffolds.fasta`  
 
 #### Run BWA-MEM reference mapping with the indexed `scaffolds.fasta` as the reference and the original trimmed fastq files as the reads:  
-`$ bwa mem results/scaffolds/scaffolds.fasta trimmed_fastq/169_S7_L001_R1_001.trim.fastq.gz trimmed_fastq/169_S7_L001_R2_001.trim.fastq.gz > results/sam/169.aligned.sam`    
+`$ bwa mem results/scaffolds/scaffolds.fasta data/trimmed_fastq/169_S7_L001_R1_001.trim.fastq.gz data/trimmed_fastq/169_S7_L001_R2_001.trim.fastq.gz > results/sam/169.aligned.sam`    
 
 
 #### Convert SAM file to BAM format:  
