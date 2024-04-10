@@ -123,7 +123,7 @@ X                 1              55
 `$ cd denovo_assembly/untrimmed_fastq`  
 `$ wget -nv https://figshare.com/ndownloader/files/45571629 -O 169_S7_L001_R1_001.fastq.gz`   
 `$ wget -nv https://figshare.com/ndownloader/files/45571626 -O 169_S7_L001_R2_001.fastq.gz`  
-`$ cp /home/gitpod/miniconda/envs/variant_calling/share/trimmomatic-0.39-2/adapters/TruSeq3-PE-2.fa:2:40:15 .` 
+`$ cp /home/gitpod/miniconda/envs/denovo_assembly/share/trimmomatic-0.39-2/adapters/TruSeq3-PE-2.fa:2:40:15 .` 
 
 
 #### Running FastQC on the raw fastq files:  
