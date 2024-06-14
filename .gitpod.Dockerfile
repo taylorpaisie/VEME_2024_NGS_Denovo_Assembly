@@ -9,22 +9,3 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh &
 
 # Initialize Conda
 RUN $HOME/miniconda/bin/conda init bash
-
-
-# Use a base image with VNC and X11 tools
-FROM gitpod/workspace-full-vnc:latest
-
-# Install Miniconda and X11 tools
-USER root
-RUN apt-get update && apt-get install -y x11-apps
-
-# Switch back to the gitpod user
-USER gitpod
-
-# Copy the environment.yml file to the workspace
-COPY environment.yml /workspace/
-
-# Create the conda environment
-RUN conda env create -f /workspace/environment.yml
-
-
