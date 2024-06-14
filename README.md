@@ -136,7 +136,11 @@ X                 1              55
 #### Now run Trimmomatic on the raw fastq files:  
 
 ```
-$ trimmomatic PE 169_S7_L001_R1_001.fastq.gz 169_S7_L001_R2_001.fastq.gz 169_S7_L001_R1_001.trim.fastq.gz 169_S7_L001_R1_001un.trim.fastq.gz 169_S7_L001_R2_001.trim.fastq.gz 169_S7_L001_R2_001un.trim.fastq.gz SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
+$ trimmomatic PE \
+169_S7_L001_R1_001.fastq.gz 169_S7_L001_R2_001.fastq.gz \
+169_S7_L001_R1_001.trim.fastq.gz 169_S7_L001_R1_001un.trim.fastq.gz \
+169_S7_L001_R2_001.trim.fastq.gz 169_S7_L001_R2_001un.trim.fastq.gz \
+SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 ```
 
 #### Run FastQC on newly trimmed fastq files:  
