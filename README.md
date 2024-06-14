@@ -294,7 +294,12 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 #### After running this commmand, each fasta input in `169_improved.fasta` has `_pilon`
 #### We want to remove this `_pilon` after each fasta input
 #### Open `169_improved.fasta` in a text editor
+
+`$ code 169_improved.fasta`
+
 #### We want to "replace all" `_pilon` with nothing
+
+
 
 <figure>
     <img src="images/editing_fasta.png" width="1000">
