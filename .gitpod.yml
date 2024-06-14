@@ -18,25 +18,14 @@ tasks:
         conda env create -f environment.yml || conda env update -f environment.yml;
     command: echo "Activating Conda Environment..." && conda activate denovo_assembly
 
-  - name: Install X11 and Related Tools
-    init: |
-        sudo apt-get update;
-        sudo apt-get install -y x11-apps;
-    command: echo "X11 tools installed."
-
 ports:
   - port: 8888
-    onOpen: open-prev
+    onOpen: open-preview
 
 vscode:
   extensions:
     - ms-python.python
 
 env:
-  - DISPLAY: :0
-
-# Add the following lines to your .gitpod.Dockerfile file:
-# FROM gitpod/workspace-full-vnc:latest
-# USER root
-# RUN apt-get update && apt-get install -y x11-apps
-# USER gitpod
+  - name: DISPLAY
+    value: :0
