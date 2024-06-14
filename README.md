@@ -295,7 +295,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 #### We want to remove this `_pilon` after each fasta input
 #### Open `169_improved.fasta` in a text editor
 
-`$ code 169_improved.fasta`
+`$ code results/scaffolds/169_improved.fasta`
 
 #### We want to "replace all" `_pilon` with nothing
 
@@ -345,10 +345,9 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 
 #### Need to activate the Prokka conda environment (we can talk about this later if we have time):  
+ 
 
-`$ conda activate Prokka`  
-
-`$ /usr/local/share/prokka/bin/prokka --outdir results/annotation/prokka_output --kingdom Viruses --proteins results/annotation/NC_031063.1.faa results/scaffolds/169_improved.fasta`  
+`$ prokka --outdir results/annotation/prokka_output --kingdom Viruses --proteins results/annotation/NC_031063.1.faa results/scaffolds/169_improved.fasta`  
 
 
 ### 7. Visualize genome annotation
