@@ -21,5 +21,10 @@ RUN apt-get update && apt-get install -y x11-apps
 # Switch back to the gitpod user
 USER gitpod
 
-# Add any other dependencies or configurations here
+# Copy the environment.yml file to the workspace
+COPY environment.yml /workspace/
+
+# Create the conda environment
+RUN conda env create -f /workspace/environment.yml
+
 
