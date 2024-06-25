@@ -123,8 +123,8 @@ X                 1              55
 
 #### Download the fastq and adapter files in the untrimmed fastq directory:  
 `$ cd ~/denovo_assembly/data/untrimmed_fastq`  
-`$ wget -nv https://figshare.com/ndownloader/files/45571629 -O 169_S7_L001_R1_001.fastq.gz`   
-`$ wget -nv https://figshare.com/ndownloader/files/45571626 -O 169_S7_L001_R2_001.fastq.gz`  
+`$ wget -nv https://figshare.com/ndownloader/files/45571629 -O 169_S7_L001_R1_001.fastq.gz --no-check-certificate`   
+`$ wget -nv https://figshare.com/ndownloader/files/45571626 -O 169_S7_L001_R2_001.fastq.gz --no-check-certificate`  
 `$ cp /home/gitpod/miniconda/envs/denovo_assembly/share/trimmomatic-0.39-2/adapters/TruSeq3-PE-2.fa .` 
 
 
