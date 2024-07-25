@@ -339,7 +339,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 #### Running prokka on the improved alignment with our downloaded protein set for annotation:  
 
 `$ mkdir -p results/annotation`  
-`$ cp /usr/local/share/data/denovo_assembly/results/annotation/NC_031063.1.faa ~/denovo_assembly/results/annotation`  
+`$ wget -nv https://raw.githubusercontent.com/taylorpaisie/VEME_2024_NGS_Denovo_Assembly/main/NC_031063.1.faa -O ~/denovo_assembly/results/annotation/NC_031063.1.faa`  
 
 #### For this tutorial we will copy the protein set we will use for annotation  
 
