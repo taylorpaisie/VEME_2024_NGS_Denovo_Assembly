@@ -112,7 +112,6 @@ X                 1              55
 #### The sample we will be using is a 2x250 Illumina sequenced bacteriophage  
 #### The goal of this exercise is to assemble the genome of a sequenced bacteriophage  
 
-#### [Link to data](https://doi.org/10.6084/m9.figshare.25577178.v1)
 
 #### Making directories for lesson:
 
