@@ -20,7 +20,6 @@
 #### Command line cheat sheet
 <figure>
     <img src="images/command-line-cheat-sheet-large.png" height="800">
-    <figcaption>Variant Calling Workflow</figcaption>
 </figure>
 
 ### 1. Introduction to sequence assembly
@@ -36,7 +35,7 @@
 
 #### *De novo* assembly usually includes the following steps:  
 1. Improving of the reads quality (remove adapters, trim reads, etc..)  
-2. De novo assembly of the overlapping reads into contigs
+2. *De novo* assembly of the overlapping reads into contigs
 3. Joining contigs into scaffolds
 4. Comparison with other known genomes
 5. Filling the gaps
