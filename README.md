@@ -7,6 +7,10 @@
 ### Email:  ltj8@cdc.gov
 ### `https://taylorpaisie.github.io/VEME_2024_NGS_Denovo_Assembly/`
 
+<figure>
+    <img src="images/notsimply.png" weight="800">
+</figure>
+
 #### Directory visualization
 <figure>
     <img src="images/denovo_assembly_Graph.svg" width="600">
