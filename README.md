@@ -8,7 +8,7 @@
 ### `https://taylorpaisie.github.io/VEME_2024_NGS_Denovo_Assembly/`
 
 <figure>
-    <img src="images/notsimply.png" weight="800">
+    <img src="images/notsimply.png" width="500">
 </figure>
 
 #### Directory visualization
